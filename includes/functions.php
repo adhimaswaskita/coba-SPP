@@ -42,6 +42,16 @@ function getTahunMasuk(){
     return $tahunMasukResult;
 }
 
+function getMonth() {
+    $selectMonthIdQuery = "SELECT id, nama FROM bulan WHERE nama LIKE '$bulan%'";
+    $selectMonthIdResult = mysqli_query($connection, $selectMonthIdQuery);
+    if(!$selectMonthIdResult) {
+        die(mysqli_error($selectMonthIdResult));
+    }
+
+    return $selectMonthIdResult;
+}
+
 function toCurrency($value) {
     if ($value<0) return "-".toCurrency($value);
     return 'Rp' . number_format($value) . ',-';

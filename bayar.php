@@ -8,15 +8,11 @@ if(isset($_POST['submit'])) {
     $bulan = $_POST['submit'];
 }
 
-$selectMonthIdQuery = "SELECT id, nama FROM bulan WHERE nama LIKE '$bulan%'";
-$selectMonthIdResult = mysqli_query($connection, $selectMonthIdQuery);
-if(!$selectMonthIdResult) {
-    die(mysqli_error($selectMonthIdResult));
-}
+$selectMonthIdResult = getMonth();
 
-$selectMonth = mysqli_fetch_assoc($selectMonthIdResult);
-$monthId = $selectMonth['id'];
-$monthName = $selectMonth['nama'];
+$month = mysqli_fetch_assoc($selectMonthIdResult);
+$monthId = $month['id'];
+$monthName = $month['nama'];
 
 if (isset($_POST['kirim'])) {
     $perihal = $_POST['perihal'];
