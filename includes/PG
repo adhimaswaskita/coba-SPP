@@ -1,0 +1,10 @@
+<?php 
+    while ($data = mysqli_fetch_assoc($result)) { ?>
+        <div class="months">
+            <div class="checklist">
+                <P>SAD</P>
+            </div>
+            <a class="month-name" href=""><?php echo $data['nama'][0] . $data['nama'][1] . $data['nama'][2]; ?></a>
+        </div>
+    <?php } 
+?>

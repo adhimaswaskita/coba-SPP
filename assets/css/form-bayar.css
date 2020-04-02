@@ -1,0 +1,48 @@
+.form-container {
+    margin: 40px 10px 50px 10px;
+    padding-bottom: 70px;
+    background-color: #f4f4f4;
+    border-radius: 20px;
+}
+
+.form-container h1{
+    text-align: center;
+    font-family: BalooThambi2-Bold;
+    padding-top: 30px;
+}
+
+.form-container form {
+    margin: 20px 30px;
+}
+
+.form-container label {
+    font-family: BalooThambi2-Medium;
+    font-size: 20px;
+}
+
+.form-container input[type=text] {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding: 10px 0px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(138, 138, 138);
+    width: 100%;
+    outline: none;
+}
+
+.form-container input[type=file] {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.form-container input[type=submit] {
+    float: right;
+    background-color: #ff847c;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-family: BalooThambi2-Medium;
+    cursor: pointer;
+    margin-top: 10px;
+}

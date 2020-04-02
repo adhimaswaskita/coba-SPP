@@ -1,0 +1,185 @@
+@font-face{
+    font-family: BalooThambi2-Bold;
+    src: url(../fonts/BalooThambi2-Bold.ttf);
+}
+
+@font-face{
+    font-family: BalooThambi2-Medium;
+    src: url(../fonts/BalooThambi2-Medium.ttf);
+}
+
+@font-face{
+    font-family: BalooThambi2-Regular;
+    src: url(../fonts/BalooThambi2-Regular.ttf);
+}
+
+body {
+    margin: 50px;
+}
+
+.head-container {
+    width: 800px;
+    height: 200px;
+    margin: 40px 0px 50px 10px;
+    background-color: #fecea8;
+    border-radius: 20px;
+    padding-top: 15px;
+}
+
+.head-title {
+    font-family: BalooThambi2-Medium;
+    margin: 2px 20px 2px 25px;
+    color: #ff8e42;
+}
+
+.head-content {
+    font-family: BalooThambi2-Regular;
+    margin: 0px 0px 0px 25px;
+    color: #ff8e42;
+}
+
+.head-container img {
+    width:200px; 
+    height:200px;
+    float: right;
+    margin-right: 50px;
+}
+
+.months-container-title {
+    font-family: BalooThambi2-Bold;
+    margin-left: 10px;
+}
+
+.months-container {
+    width: 800px;
+}
+
+.months-container-image {
+    margin-top: 18%;
+    max-width: 60%;
+}
+
+
+.months {
+    width: 90px;
+    padding: 3px 5px 35px 5px;
+    background-color: rgb(138, 138, 138);
+    text-align: center;
+    border-radius: 55px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.months input {
+    cursor: context-menu;
+}
+
+.months-warning {
+    width: 90px;
+    padding: 3px 5px 35px 5px;
+    background-color: #e84a5f;
+    text-align: center;
+    border-radius: 55px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.months-pending {
+    width: 90px;
+    padding: 3px 5px 35px 5px;
+    background-color: #ffd900;
+    text-align: center;
+    border-radius: 55px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.months-success {
+    width: 90px;
+    padding: 3px 5px 35px 5px;
+    background-color: #56e949;
+    text-align: center;
+    border-radius: 55px;
+    display: inline-block;
+    margin: 10px;
+}
+
+
+.checklist {
+    height: 60px;
+    width: 60px;
+    margin: 0px 0px 15px 16px;
+    background-color: #f9fcfb;
+    border-radius: 50%;
+    font-family: BalooThambi2-Bold;
+}
+
+.month-name {
+    color: black;
+    text-decoration: none;
+    font-family: BalooThambi2-Bold;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#tahun {
+    float: right;
+    background-color: #ff847c;
+    border-radius: 25px;
+    border-style: none;
+    font-family: BalooThambi2-Regular;
+    font-size: 11pt;
+    color: white;
+    padding: 10px;
+}
+
+.navbar a{
+        font-family: BalooThambi2-Bold;
+        margin: 0px 0px 100px 10px;
+        text-decoration: none;
+        color: black;
+        font-size: 14pt;
+}
+
+.profile {
+    float: right;
+    width: 400px;
+    height: 500px;
+    background-color: #f4f4f4;
+    margin-top: 40px;
+    border-radius: 20px;
+} 
+
+.profile-title {
+    font-family: BalooThambi2-Medium;
+    margin: 15px 20px 0px 25px;
+    color: #000000;
+}
+
+
+.profile-picture {
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin: 15px 20px;
+    border-radius: 50%;
+}
+
+.profile-information-title {
+    font-family: BalooThambi2-Medium;
+    margin: 20px 20px 0px 25px;
+    color: #000000;
+}
+
+.profile-information {
+    font-family: BalooThambi2-Regular;
+    margin: 0px 20px 0px 25px;
+    font-size: 18pt;
+    color: #000000;
+}
+
+.separator {
+    margin: 20px 25px;
+}
