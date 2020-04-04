@@ -2,16 +2,17 @@
 <?php include "includes/functions.php" ?>
 
 <?php 
+$id_siswa = 1;
 
-$result = getCardInfo();
+$result = getCardInfo($id_siswa);
 
-$arrearsResult = getUserArrears();
+$arrearsResult = getUserArrears($id_siswa);
 $arrearsData = mysqli_fetch_assoc($arrearsResult);
 $arrears = $arrearsData['SUM(bulan.nominal)'];
 $userArrears = toCurrency($arrears);
 
-$profileResult = getProfileInfo();
-$tahunMasukResult = getTahunMasuk();
+$profileResult = getProfileInfo($id_siswa);
+$tahunMasukResult = getTahunMasuk($id_siswa);
 
 ?>
 

@@ -32,9 +32,9 @@ if (isset($_POST['kirim'])) {
     if(!$insertResult) {
         die(mysqli_error($connection));
     }
-}
 
-// header("Location: dashboard.php");
+    header("Location: dashboard.php");
+}
 
 ?>
 

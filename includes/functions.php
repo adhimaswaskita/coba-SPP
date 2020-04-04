@@ -11,10 +11,11 @@ function getCardInfo() {
     return $result;
 }
 
-function getUserArrears() {
+function getUserArrears($id_siswa) {
     global $connection;
     $month = date('n');
-    $sumQuery = "SELECT SUM(bulan.nominal) FROM bulan LEFT JOIN pembayaran ON bulan.id = pembayaran.id_bulan WHERE NOT (pembayaran.status = 'success') OR pembayaran.status IS null AND bulan.id <= $month;";
+    $sumQuery = "SELECT SUM(bulan.nominal) FROM bulan LEFT JOIN pembayaran ON ";
+    $sumQuery .= "bulan.id = pembayaran.id_bulan WHERE NOT (pembayaran.status = 'success') OR pembayaran.status IS null AND bulan.id <= $month AND pembayaran.id_siswa = $id_siswa;";
     $sumResult = mysqli_query($connection, $sumQuery);
     if (!$sumResult) {
         die(mysqli_error($sumResult));
@@ -22,9 +23,9 @@ function getUserArrears() {
     return $sumResult;
 }
 
-function getProfileInfo() {
+function getProfileInfo($id_siswa) {
     global $connection;
-    $profileQuery = "SELECT * FROM siswa WHERE id = 1";
+    $profileQuery = "SELECT * FROM siswa WHERE id = $id_siswa";
     $profileResult = mysqli_query($connection, $profileQuery);
     if (!$profileResult) {
         die(mysqli_error($profileResult));
@@ -32,9 +33,9 @@ function getProfileInfo() {
     return $profileResult;
 }
 
-function getTahunMasuk(){
+function getTahunMasuk($id_siswa){
     global $connection;
-    $tahunMasukQuery = "SELECT tahun_masuk FROM siswa WHERE id = 1";
+    $tahunMasukQuery = "SELECT tahun_masuk FROM siswa WHERE id = $id_siswa";
     $tahunMasukResult = mysqli_query($connection, $tahunMasukQuery);
     if (!$tahunMasukResult) {
         die(mysqli_error($tahunMasukResult));
@@ -51,6 +52,17 @@ function getMonth($month) {
     }
 
     return $selectMonthIdResult;
+}
+
+function getPendingPayment($id_siswa) {
+    global $connection;
+    $selectPendingPaymentQuery = "SELECT * FROM pembayaran WHERE status = 'pending' AND id_siswa = $id_siswa";
+    $selectPendingPaymentResult = mysqli_query($connection, $selectPendingPaymentQuery);
+    if(!$selectPendingPaymentResult){
+        die(mysqli_error($selectPendingPaymentResult));
+    }
+
+    return $selectPendingPaymentResult;
 }
 
 function toCurrency($value) {
