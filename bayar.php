@@ -1,14 +1,15 @@
 <?php 
 
 include "./includes/header.php";
-include "includes/db.php";
+include "includes/functions.php";
+
 
 if(isset($_POST['submit'])) {
     $tahun = $_POST['years'];
     $bulan = $_POST['submit'];
 }
 
-$selectMonthIdResult = getMonth();
+$selectMonthIdResult = getMonth($bulan);
 
 $month = mysqli_fetch_assoc($selectMonthIdResult);
 $monthId = $month['id'];

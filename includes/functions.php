@@ -42,8 +42,9 @@ function getTahunMasuk(){
     return $tahunMasukResult;
 }
 
-function getMonth() {
-    $selectMonthIdQuery = "SELECT id, nama FROM bulan WHERE nama LIKE '$bulan%'";
+function getMonth($month) {
+    global $connection;
+    $selectMonthIdQuery = "SELECT id, nama FROM bulan WHERE nama LIKE '$month%'";
     $selectMonthIdResult = mysqli_query($connection, $selectMonthIdQuery);
     if(!$selectMonthIdResult) {
         die(mysqli_error($selectMonthIdResult));

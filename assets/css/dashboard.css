@@ -104,6 +104,10 @@ body {
     margin: 10px;
 }
 
+.months-success input {
+    cursor: context-menu;
+}
+
 
 .checklist {
     height: 60px;
